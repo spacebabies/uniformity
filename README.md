@@ -11,16 +11,12 @@ The beauty of this approach is that the engine behaves just a regular Rails appl
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'uniformity'
+gem 'uniformity', group: :development
 ```
 
 And then execute:
 
     $ bundle
-
-Or install it yourself as:
-
-    $ gem install uniformity
 
 ## Usage
 
@@ -31,6 +27,12 @@ rails generate uniformity:space_babies
 ```
 
 Put all the code using this service in the `engines/space_babies` directory. Use any Rails design pattern you need. A few empty classes using the correct namespace are generated for you as a starting point.
+
+### Dependencies
+
+If your code depends on a gem, put those in the engine's `gemspec` and not in your main app. Make sure your main app has just the one dependency on the engine.
+
+After generatin', you can remove Uniformity from your Gemfile if you want. The generated engine has no dependencies whatsoever, outside from Rails. There is no harm in leaving Uniformity enabled either, since it has no run-time code.
 
 ## Contributing
 
