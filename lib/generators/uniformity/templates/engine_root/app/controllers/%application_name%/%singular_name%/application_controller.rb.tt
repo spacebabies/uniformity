@@ -1,0 +1,6 @@
+module <%= application_const_base %>
+  module <%= class_name %>
+    class ApplicationController < ActionController::Base
+    end
+  end
+end

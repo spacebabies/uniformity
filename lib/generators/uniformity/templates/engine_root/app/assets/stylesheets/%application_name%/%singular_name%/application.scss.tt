@@ -1,0 +1,2 @@
+// To include this in the main app:
+// @import '<%= application_name %>/<%= singular_name %>/application';

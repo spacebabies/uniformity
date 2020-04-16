@@ -1,0 +1,9 @@
+require_dependency '<%= application_name %>/<%= singular_name %>/application_controller'
+
+module <%= application_const_base %>
+  module <%= class_name %>
+    class WebhooksController < ApplicationController
+      protect_from_forgery with: :null_session
+    end
+  end
+end

@@ -1,0 +1,20 @@
+$:.push File.expand_path("../lib", __FILE__)
+
+# Maintain your gem's version:
+require "<%= application_name %>/<%= singular_name %>/version"
+
+# Describe your gem and declare its dependencies:
+Gem::Specification.new do |s|
+  s.name        = "<%= application_name %>-<%= singular_name %>"
+  s.version     = <%= application_const_base %>::<%= class_name %>::VERSION
+  s.authors     = ["Joost Baaij"]
+  s.email       = ["joost@spacebabies.nl"]
+  s.homepage    = "https://www.spacebabies.nl/"
+  s.summary     = "Engine to connect <%= application_const_base %> to <%= class_name %>"
+  s.description = "Engine to connect <%= application_const_base %> to <%= class_name %>"
+
+  s.files = Dir["{app,config,db,lib}/**/*", "Rakefile", "README.md"]
+
+  # add your gem dependencies here
+  s.add_dependency "rails"
+end

@@ -1,0 +1,5 @@
+module <%= application_const_base %>
+  module <%= class_name %>
+    VERSION = '1.0.0'
+  end
+end

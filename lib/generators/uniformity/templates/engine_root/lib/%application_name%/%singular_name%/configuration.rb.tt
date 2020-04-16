@@ -1,0 +1,25 @@
+module <%= application_const_base %>
+  module <%= class_name %>
+    # Just a random example of structured data to store in here.
+    Credentials = Struct.new(:setting_1, :setting_2)
+
+    # Configure this engine using a block:
+    #
+    # <%= application_const_base %>::<%= class_name %>.configure do |config|
+    #   # add your configuration settings here, e.g.:
+    #   # config.<setting> = <value>
+    # end
+    #
+    # The value can be accessed with <%= application_const_base %>::<%= class_name %>.configuration.<setting>.
+    class Configuration
+      # e.g. Credentials to connect with their API.
+      # Defaults to looking up the values in ENV.
+      def credentials
+        @credentials ||= Credentials.new(
+          ENV['<%= application_name.upcase %>_<%= singular_name.upcase %>_KEY'],
+          ENV['<%= application_name.upcase %>_<%= singular_name.upcase %>_SECRET']
+        )
+      end
+    end
+  end
+end

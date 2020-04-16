@@ -1,0 +1,13 @@
+source 'https://rubygems.org'
+
+git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
+
+# Dependencies are declared in `gemspec`.
+gemspec
+
+# The exception is any dependencies that are temporary or a work in progress.
+# They should go in this file during development.
+# Remember to move these dependencies to gemspec before releasing to rubygems.org.
+
+# To use a debugger
+# gem 'byebug', group: [:development, :test]

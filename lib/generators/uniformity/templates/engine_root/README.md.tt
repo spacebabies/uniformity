@@ -1,0 +1,22 @@
+# <%= application_const_base %> went to meet <%= class_name %>
+
+In this engine we've placed everything needed to facilitate this discussion.
+This way, everything is neatly contained in one place.
+
+## Usage
+1. Incoming webhooks: /<mount point>/webhooks/<action_name>
+
+## Installation
+This engine should be part of the <%= application_const_base %> Rails app.
+
+```ruby
+gem '<%= application_name %>-<%= singular_name %>', path: "engines/<%= application_name %>-<%= singular_name %>"
+```
+
+And then execute:
+```bash
+$ bundle
+```
+
+## Questions?
+Joost Baaij, Space Babies, joost@spacebabies.nl

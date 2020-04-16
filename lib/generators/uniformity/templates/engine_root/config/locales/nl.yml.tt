@@ -1,0 +1,3 @@
+nl:
+  <%= application_name %>:
+    <%= singular_name %>:

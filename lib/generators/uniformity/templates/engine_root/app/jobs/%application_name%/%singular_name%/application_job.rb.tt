@@ -1,0 +1,7 @@
+module <%= application_const_base %>
+  module <%= class_name %>
+    class ApplicationJob < ActiveJob::Base
+      self.abstract_class = true
+    end
+  end
+end

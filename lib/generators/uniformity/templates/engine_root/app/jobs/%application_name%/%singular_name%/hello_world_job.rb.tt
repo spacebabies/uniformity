@@ -1,0 +1,9 @@
+require_dependency '<%= application_name %>/<%= singular_name %>/application_job'
+
+module <%= application_const_base %>
+  module <%= class_name %>
+    class HelloWorldJob < ApplicationJob
+      self.abstract_class = true
+    end
+  end
+end

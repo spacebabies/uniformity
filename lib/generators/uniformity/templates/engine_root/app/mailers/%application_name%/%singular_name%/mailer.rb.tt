@@ -1,0 +1,6 @@
+module <%= application_const_base %>
+  module <%= class_name %>
+    class Mailer < ::ApplicationMailer
+    end
+  end
+end

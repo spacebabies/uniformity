@@ -1,0 +1,20 @@
+require '<%= application_name %>/<%= singular_name %>/configuration'
+require '<%= application_name %>/<%= singular_name %>/engine'
+
+module <%= application_const_base %>
+  module <%= class_name %>
+    class << self
+      attr_accessor :configuration
+
+      # Allow configuration to be stored for this engine.
+      def configure
+        self.configuration ||= Configuration.new
+        yield(configuration)
+      end
+    end
+
+    def self.engine
+      Engine
+    end
+  end
+end

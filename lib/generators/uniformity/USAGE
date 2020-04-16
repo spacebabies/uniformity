@@ -1,0 +1,18 @@
+Description:
+    Wrap any external service with an Engine.
+
+Example:
+    Let's say your Rails application wants to send email using Postmark API.
+
+    Generate an engine to contain all code related to this interface:
+        rails generate uniformity:engine Postmark
+
+    This will create:
+        engines/<your_application>-postmark/app
+        engines/<your_application>-postmark/bin
+        engines/<your_application>-postmark/config
+        engines/<your_application>-postmark/lib
+        engines/<your_application>-postmark/Gemfile
+        engines/<your_application>-postmark/<your_application>-postmark.gemspec
+        engines/<your_application>-postmark/Rakefile
+        engines/<your_application>-postmark/README.md

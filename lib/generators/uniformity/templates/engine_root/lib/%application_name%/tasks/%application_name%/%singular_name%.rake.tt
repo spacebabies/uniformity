@@ -1,0 +1,9 @@
+namespace :<%= application_name %> do
+  namespace :<%= singular_name %> do
+    # Hi from the generator. You can delete this task.
+    desc "👋 konichi-wa everyone!"
+    task hello: :environment do
+      puts "OHAI from the <%= application_name %>-<%= singular_name %> engine!"
+    end
+  end
+end
