@@ -1,0 +1,19 @@
+module <%= application_const_base %>
+  module <%= class_name %>
+    # Gives you:
+    #   serializable_hash
+    #   as_json
+    #   to_json (string representation)
+    class ApplicationSerializer
+      include ActiveModel::Serializers::JSON
+
+      attr_accessor :name
+
+      def attributes
+        {
+          'name' => nil
+        }
+      end
+    end
+  end
+end

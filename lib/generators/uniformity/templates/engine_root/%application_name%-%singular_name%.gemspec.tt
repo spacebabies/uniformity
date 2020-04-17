@@ -7,14 +7,16 @@ require "<%= application_name %>/<%= singular_name %>/version"
 Gem::Specification.new do |s|
   s.name        = "<%= application_name %>-<%= singular_name %>"
   s.version     = <%= application_const_base %>::<%= class_name %>::VERSION
-  s.authors     = ["Joost Baaij"]
-  s.email       = ["joost@spacebabies.nl"]
-  s.homepage    = "https://www.spacebabies.nl/"
-  s.summary     = "Engine to connect <%= application_const_base %> to <%= class_name %>"
-  s.description = "Engine to connect <%= application_const_base %> to <%= class_name %>"
+#  s.authors     = ["Example Name"]
+#  s.email       = ["name@example.com"]
+#  s.homepage    = "https://www.example.com/"
+  s.summary     = "Rails Engine to connect <%= application_const_base %> to <%= class_name %>"
+  s.description = "Rails Engine to connect <%= application_const_base %> to <%= class_name %>"
 
-  s.files = Dir["{app,config,db,lib}/**/*", "Rakefile", "README.md"]
+  s.files = Dir["{app,bin,config,db,lib}/**/*", "Rakefile", "README.md"]
+
+  s.add_dependency "rails"
 
   # add your gem dependencies here
-  s.add_dependency "rails"
+  # s.add_dependency "<%= singular_name %>"
 end
