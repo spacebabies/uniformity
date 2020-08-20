@@ -5,12 +5,12 @@ module <%= application_const_base %>
   module <%= class_name %>
     class << self
       attr_accessor :configuration
+    end
 
-      # Allow configuration to be stored for this engine.
-      def configure
-        self.configuration ||= Configuration.new
-        yield(configuration)
-      end
+    # Allow configuration to be stored for this engine.
+    def self.configure
+      self.configuration ||= Configuration.new
+      yield(configuration)
     end
 
     def self.engine

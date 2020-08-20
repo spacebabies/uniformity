@@ -12,13 +12,11 @@ module <%= application_const_base %>
     #
     # The value can be accessed with <%= application_const_base %>::<%= class_name %>.configuration.<setting>.
     class Configuration
-      # e.g. Credentials to connect with their API.
-      # Defaults to looking up the values in ENV.
-      def credentials
-        @credentials ||= Credentials.new(
-          ENV['<%= application_name.upcase %>_<%= singular_name.upcase %>_KEY'],
-          ENV['<%= application_name.upcase %>_<%= singular_name.upcase %>_SECRET']
-        )
+      attr_accessor :setting_1, :setting_2
+
+      def initialize
+        @setting_1 = ENV['<%= application_name.upcase %>_<%= singular_name.upcase %>_SETTING_1']
+        @setting_2 = ENV['<%= application_name.upcase %>_<%= singular_name.upcase %>_SETTING_2']
       end
     end
   end

@@ -8,8 +8,8 @@ module <%= application_const_base %>
       config.autoload_paths << File.expand_path('lib', __dir__)
 
       config.generators do |g|
-        g.test_framework :rspec
-        g.fixture_replacement :factory_bot, dir: 'spec/factories'
+        # g.test_framework :rspec
+        # g.fixture_replacement :factory_bot, dir: 'spec/factories'
       end
 
       config.after_initialize do |app|

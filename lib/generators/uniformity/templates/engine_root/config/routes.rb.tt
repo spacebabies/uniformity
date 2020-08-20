@@ -1,3 +1,5 @@
 <%= application_const_base %>::<%= class_name %>::Engine.routes.draw do
-  post 'webhooks/bounce', to: 'webhooks#bounce'
+  namespace :webhooks do
+    post :hook1, to: 'events#hook1'
+  end
 end
