@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    uniformity (0.9.2)
+    uniformity (1.0.0)
 
 GEM
   remote: https://rubygems.org/
@@ -32,4 +32,4 @@ DEPENDENCIES
   uniformity!
 
 BUNDLED WITH
-   2.0.2
+   2.1.4
