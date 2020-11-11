@@ -1,5 +1,5 @@
 <%= application_const_base %>::<%= class_name %>::Engine.routes.draw do
   namespace :webhooks do
-    post :hook1, to: 'events#hook1'
+    post :hook1, to: 'webhooks#hook1'
   end
 end

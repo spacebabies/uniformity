@@ -23,10 +23,10 @@ And then execute:
 Imagine you want to use the fictional external service `Space Babies`. Run this command:
 
 ```
-rails generate uniformity:space_babies
+rails generate uniformity:engine space_babies
 ```
 
-Put all the code using this service in the `engines/space_babies` directory. Use any Rails design pattern you need. A few empty classes using the correct namespace are generated for you as a starting point.
+It generates a shiny new Rails Engine in the `engines` directory and hooks it up to the main app. Put all the code pertaining to this service in the engine. Use any Rails design pattern you need. A few empty classes using the correct namespace are generated for you as a starting point.
 
 ### Dependencies
 
